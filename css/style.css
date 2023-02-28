@@ -608,11 +608,12 @@ img.example {
 
 .reception-list {
   display: flex;
-  gap: 120px;
+  /* gap: 100px; */
 }
 
 .footer-title {
   min-width: 264px;
+  margin-right: 120px;
 }
 
 .logo {
@@ -653,6 +654,7 @@ img.example {
 .social-media {
   max-width: 280px;
   height: 80px;
+  margin-right: 80px;
 }
 .social-title {
   margin-top: 0;
@@ -692,15 +694,18 @@ img.example {
 }
 
 .subscribe {
-  display: flex;
   width: 453px;
   height: 80px;
   align-items: center;
 }
-
+.subscribe-form {
+  width: 100%;
+  gap: 24px;
+  display: flex;
+}
 .subscribe-title {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -711,12 +716,28 @@ img.example {
 .subscribe-input {
   width: 264px;
   height: 40px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  display: flex;
+  padding: 8px 16px;
+  letter-spacing: 0.04em;
+  color: var(--primary-background-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: var(--secondary-background-color);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.subscribe-input:focus {
+  outline: none;
+  border-color: var(--tap-link-color);
+}
 .submit {
+  display: flex;
+  align-items: center;
+  text-align: center;
   padding: 8px 24px;
   gap: 16px;
   width: 165px;
@@ -731,7 +752,18 @@ img.example {
   background-color: var(--primary-btn-color);
   outline: none;
   border: none;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit:hover,
+.submit:focus {
+  background-color: var(--tap-link-color);
+  border-color: var(--tap-link-color);
+}
+
+.subscribe-icon {
+  fill: var(--primary-background-color);
 }
 
 /* Modal */
@@ -753,7 +785,7 @@ img.example {
 
 .modal {
   position: absolute;
-  /* padding: 24px; */
+
   width: 408px;
   height: 576px;
   left: 50%;
