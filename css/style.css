@@ -785,9 +785,11 @@ img.example {
 
 .modal {
   position: absolute;
-
+  padding-top: 72px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
   width: 408px;
-  height: 576px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -822,8 +824,6 @@ img.example {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal .close:hover,
 .modal .close:focus {
@@ -834,15 +834,12 @@ img.example {
 /* Modal form */
 
 .form {
-  padding-left: 24px;
-  padding-right: 24px;
   flex-direction: column;
 }
 
 .modal-title {
-  padding-top: 72px;
-  padding-bottom: 16px;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
